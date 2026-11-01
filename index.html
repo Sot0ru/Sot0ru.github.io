@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David · Developer</title>
+  <meta name="description" content="David builds backends and small products. Projects: a concurrent ticket booking API in Spring Boot and Wissenshappen, an AI-powered knowledge feed.">
+  <meta name="theme-color" content="#07080a">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav glass">
+    <a href="#top" class="nav__brand" aria-label="David, back to top">
+      <span class="nav__logo">D</span>
+      <span class="nav__name">David</span>
+    </a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="kbd-hint" type="button" data-palette-open aria-label="Open command menu">
+        <kbd data-mod-key>⌘</kbd><kbd>K</kbd>
+      </button>
+      <a href="#contact" class="btn btn--key btn--sm">Get in touch</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-name">
+      <div class="aurora" aria-hidden="true">
+        <div class="aurora__blade aurora__blade--1"></div>
+        <div class="aurora__blade aurora__blade--2"></div>
+        <div class="aurora__blade aurora__blade--3"></div>
+        <div class="aurora__vignette"></div>
+      </div>
+
+      <div class="hero__content">
+        <h1 class="hero__name" id="hero-name" aria-label="David">David</h1>
+
+        <p class="hero__tagline">
+          <span class="reveal" style="--d: 700ms">Student.</span><br>
+          <span class="reveal" style="--d: 800ms">Building things to understand how they</span>&nbsp;<span class="reveal text-gradient" style="--d: 950ms">work.</span>
+        </p>
+
+        <div class="terminal glass reveal" style="--d: 1100ms">
+          <div class="terminal__bar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="terminal__title">david@portfolio ~</span>
+          </div>
+          <div class="terminal__body" id="terminal">
+            <p class="t-line"><span class="t-prompt">$</span><span class="t-cmd">whoami</span></p>
+            <p class="t-out">David. Java &amp; Spring Boot, mostly.</p>
+            <p class="t-line"><span class="t-prompt">$</span><span class="t-cmd">cat now.txt</span></p>
+            <p class="t-out">Finishing a concurrent ticket booking API in Spring Boot.</p>
+            <p class="t-line"><span class="t-prompt">$</span><span class="t-cmd">ls projects/</span></p>
+            <p class="t-out"><a href="#project-ticket">ticket-booking-api/</a>&nbsp;&nbsp;<a href="#project-wissen">wissenshappen/</a></p>
+            <p class="t-line t-line--idle"><span class="t-prompt">$</span><span class="caret"></span></p>
+          </div>
+        </div>
+
+        <div class="hero__ctas reveal" style="--d: 1300ms">
+          <a href="#projects" class="btn btn--key">View projects
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </a>
+          <a href="https://github.com/Sot0ru" class="btn btn--ghost" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/david-tran-020411335/" class="btn btn--ghost" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <a href="#projects" class="scroll-cue" aria-label="Scroll to projects"><span></span></a>
+    </section>
+
+    <!-- Projects -->
+    <section class="section projects" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">01 / Selected work</p>
+          <h2 class="section__title" id="projects-title">Projects</h2>
+        </header>
+
+        <div class="projects__list">
+          <div class="projects__rail" aria-hidden="true"><div class="projects__rail-fill" id="rail-fill"></div></div>
+
+          <!-- Project 1 -->
+          <article class="project" id="project-ticket">
+            <div class="project__info">
+              <p class="project__num">01</p>
+              <h3 class="project__title">Concurrent Ticket Booking API</h3>
+              <span class="status status--progress"><span></span>In progress</span>
+              <p class="project__desc">
+                A REST API for reserving and booking event seats that never double-books a seat, even when many users
+                try to book the same seat at the same moment. Seats move through
+                <span class="mono">AVAILABLE → HELD → BOOKED</span>, and concurrency tests are there to prove it.
+              </p>
+              <ul class="chips" aria-label="Tech stack">
+                <li>Java 25</li><li>Spring Boot 4</li><li>Spring Data JPA</li><li>PostgreSQL</li>
+                <li>Docker Compose</li><li>Testcontainers</li><li>GitHub Actions</li>
+              </ul>
+              <div class="project__links">
+                <a href="https://github.com/Sot0ru/ticket-booking-api" target="_blank" rel="noopener">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>Source code
+                </a>
+                <a href="https://github.com/Sot0ru/ticket-booking-api#roadmap" target="_blank" rel="noopener">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>Roadmap
+                </a>
+              </div>
+            </div>
+
+            <div class="project__visuals">
+              <figure class="panel glass">
+                <figcaption class="panel__bar mono">POST /events · 201 Created</figcaption>
+                <div class="code">
+<pre><span class="c-dim">// Request</span>
+<span class="c-key">POST</span> http://localhost:8080/events
+Content-Type: application/json
+
+{
+  <span class="c-prop">"name"</span>: <span class="c-str">"Jazz Night"</span>,
+  <span class="c-prop">"venue"</span>: <span class="c-str">"Meistersingerhalle Nuremberg"</span>,
+  <span class="c-prop">"startsAt"</span>: <span class="c-str">"2027-03-12T19:00:00Z"</span>,
+  <span class="c-prop">"endsAt"</span>: <span class="c-str">"2027-03-12T22:00:00Z"</span>
+}
+
+<span class="c-dim">// Response · Location: /events/1</span>
+{
+  <span class="c-prop">"id"</span>: <span class="c-num">1</span>,
+  <span class="c-prop">"name"</span>: <span class="c-str">"Jazz Night"</span>,
+  <span class="c-prop">"venue"</span>: <span class="c-str">"Meistersingerhalle Nuremberg"</span>,
+  <span class="c-prop">"startsAt"</span>: <span class="c-str">"2027-03-12T19:00:00Z"</span>,
+  <span class="c-prop">"endsAt"</span>: <span class="c-str">"2027-03-12T22:00:00Z"</span>
+}</pre>
+                </div>
+              </figure>
+
+              <figure class="panel glass">
+                <figcaption class="panel__bar mono">The race it solves: 8 users, 1 seat</figcaption>
+                <div class="race" id="race">
+                  <div class="race__seat">
+                    <span class="mono">Seat</span>
+                    <strong>A12</strong>
+                  </div>
+                  <ol class="race__requests">
+                    <li><span class="mono">user_1</span><span class="race__bar"></span><span class="race__res"></span></li>
+                    <li><span class="mono">user_2</span><span class="race__bar"></span><span class="race__res"></span></li>
+                    <li><span class="mono">user_3</span><span class="race__bar"></span><span class="race__res"></span></li>
+                    <li><span class="mono">user_4</span><span class="race__bar"></span><span class="race__res"></span></li>
+                    <li><span class="mono">user_5</span><span class="race__bar"></span><span class="race__res"></span></li>
+                    <li><span class="mono">user_6</span><span class="race__bar"></span><span class="race__res"></span></li>
+                    <li><span class="mono">user_7</span><span class="race__bar"></span><span class="race__res"></span></li>
+                    <li><span class="mono">user_8</span><span class="race__bar"></span><span class="race__res"></span></li>
+                  </ol>
+                  <p class="race__note mono">Goal: exactly one hold succeeds, every other request gets <em>409 Conflict</em>.</p>
+                </div>
+              </figure>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project" id="project-wissen">
+            <div class="project__info">
+              <p class="project__num">02</p>
+              <h3 class="project__title">Wissenshappen</h3>
+              <span class="status status--live"><span></span>Live</span>
+              <p class="project__desc">
+                General knowledge in bite-sized pieces, made for your phone. Every morning a GitHub Actions job turns
+                fresh news and science headlines into explainer articles with an open-source LLM. Each one comes with
+                key takeaways, a glossary and a quiz. Liking articles personalizes the feed across six topics.
+              </p>
+              <ul class="chips" aria-label="Tech stack">
+                <li>JavaScript</li><li>Node.js</li><li>Ollama · Gemma</li><li>Claude API</li>
+                <li>GitHub Actions</li><li>GitHub Pages</li><li>Built with Claude Code</li>
+              </ul>
+              <div class="project__links">
+                <a href="https://sot0ru.github.io/Wissenserweiterung_website/" target="_blank" rel="noopener">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-external"/></svg>Live site
+                </a>
+                <a href="https://github.com/Sot0ru/Wissenserweiterung_website" target="_blank" rel="noopener">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>Source code
+                </a>
+              </div>
+            </div>
+
+            <div class="project__visuals">
+              <figure class="panel panel--phone glass">
+                <figcaption class="panel__bar mono">sot0ru.github.io/Wissenserweiterung_website</figcaption>
+                <div class="phone">
+                  <div class="phone__screen">
+                    <iframe src="https://sot0ru.github.io/Wissenserweiterung_website/" title="Live preview of Wissenshappen" loading="lazy" tabindex="-1"></iframe>
+                  </div>
+                </div>
+                <a class="panel__overlay" href="https://sot0ru.github.io/Wissenserweiterung_website/" target="_blank" rel="noopener">
+                  Open live site
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-external"/></svg>
+                </a>
+              </figure>
+
+              <figure class="panel glass">
+                <figcaption class="panel__bar mono">.github/workflows/taeglich.yml · daily 03:17</figcaption>
+                <ol class="pipeline">
+                  <li><span class="pipeline__step mono">01</span><div><strong>Collect</strong><p>RSS feeds from tagesschau, Deutschlandfunk, Spektrum, ScienceDaily</p></div></li>
+                  <li><span class="pipeline__step mono">02</span><div><strong>Write</strong><p>Gemma via Ollama (or Claude) writes an explainer with quiz and glossary</p></div></li>
+                  <li><span class="pipeline__step mono">03</span><div><strong>Illustrate</strong><p>Finds a freely licensed Wikimedia Commons photo with attribution</p></div></li>
+                  <li><span class="pipeline__step mono">04</span><div><strong>Publish</strong><p>Rebuilds the index and deploys to GitHub Pages</p></div></li>
+                </ol>
+              </figure>
+            </div>
+          </article>
+
+          <!-- More -->
+          <a class="more glass reveal" href="https://github.com/Sot0ru" target="_blank" rel="noopener">
+            <svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>
+            <span>More on GitHub</span>
+            <svg class="icon more__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <p class="eyebrow reveal">02 / About</p>
+        <h2 class="section__title about__title reveal" id="about-title">
+          I learn by building things <span class="text-gradient">end&nbsp;to&nbsp;end.</span>
+        </h2>
+        <p class="about__text reveal">
+          Right now I'm going deep on backend engineering: Java, Spring Boot, PostgreSQL, and how to keep data
+          consistent when many requests hit the same row at once. I also like shipping small products quickly,
+          and I use AI tools like Claude Code to move from idea to a live site.
+        </p>
+      </div>
+
+      <div class="marquee reveal" aria-label="Skills and tools">
+        <ul class="marquee__track">
+          <li>Java</li><li>Spring Boot</li><li>Spring Data JPA</li><li>PostgreSQL</li><li>Docker Compose</li>
+          <li>JUnit 5</li><li>Testcontainers</li><li>REST APIs</li><li>GitHub Actions</li><li>JavaScript</li>
+          <li>Node.js</li><li>HTML &amp; CSS</li><li>Git</li><li>Claude Code</li>
+        </ul>
+        <ul class="marquee__track" aria-hidden="true">
+          <li>Java</li><li>Spring Boot</li><li>Spring Data JPA</li><li>PostgreSQL</li><li>Docker Compose</li>
+          <li>JUnit 5</li><li>Testcontainers</li><li>REST APIs</li><li>GitHub Actions</li><li>JavaScript</li>
+          <li>Node.js</li><li>HTML &amp; CSS</li><li>Git</li><li>Claude Code</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact__glow" aria-hidden="true"></div>
+      <div class="contact__content">
+        <p class="eyebrow reveal">03 / Contact</p>
+        <h2 class="contact__title reveal" id="contact-title">Let's build<br><span class="text-gradient">something.</span></h2>
+        <div class="contact__links">
+          <a href="https://github.com/Sot0ru" class="orb glass reveal magnetic" target="_blank" rel="noopener">
+            <svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/david-tran-020411335/" class="orb glass reveal magnetic" style="--d: 100ms" target="_blank" rel="noopener">
+            <svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-linkedin"/></svg><span>LinkedIn</span>
+          </a>
+          <a href="mailto:david09072006@gmail.com" class="orb glass reveal magnetic" style="--d: 200ms">
+            <svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg><span>Email</span>
+          </a>
+        </div>
+        <button class="copy-mail mono reveal" type="button" data-copy-email style="--d: 300ms">
+          david09072006@gmail.com <span data-copy-label>· click to copy</span>
+        </button>
+      </div>
+      <footer class="footer">© 2026 David</footer>
+    </section>
+  </main>
+
+  <!-- Command palette -->
+  <div class="palette" id="palette" role="dialog" aria-modal="true" aria-label="Command menu" hidden>
+    <div class="palette__backdrop" data-palette-close></div>
+    <div class="palette__box glass">
+      <div class="palette__search">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="text" id="palette-input" placeholder="Type a command or search…" autocomplete="off" spellcheck="false" aria-controls="palette-list">
+        <kbd>esc</kbd>
+      </div>
+      <ul class="palette__list" id="palette-list" role="listbox"></ul>
+      <div class="palette__foot mono"><span>↑↓ navigate</span><span>↵ open</span><span>esc close</span></div>
+    </div>
+  </div>
+
+  <div class="toast mono" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+  </svg>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
