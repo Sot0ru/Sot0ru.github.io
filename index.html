@@ -7,9 +7,7 @@
   <meta name="description" content="David builds backends and small products. Projects: a concurrent ticket booking API in Spring Boot and Wissenshappen, an AI-powered knowledge feed.">
   <meta name="theme-color" content="#07080a">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -280,7 +278,11 @@ Content-Type: application/json
           david09072006@gmail.com <span data-copy-label>· click to copy</span>
         </button>
       </div>
-      <footer class="footer">© 2026 David</footer>
+      <footer class="footer">
+        © 2026 David <span aria-hidden="true">·</span>
+        <a href="impressum.html" lang="de">Impressum</a> <span aria-hidden="true">·</span>
+        <a href="datenschutz.html" lang="de">Datenschutz</a>
+      </footer>
     </section>
   </main>
 

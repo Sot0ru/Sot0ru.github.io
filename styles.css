@@ -1,4 +1,22 @@
 /* ==========================================================================
+   Fonts (self-hosted, licenses in fonts/)
+   ========================================================================== */
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/inter-latin-wght-normal.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('fonts/geist-mono-latin-wght-normal.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
    Tokens
    ========================================================================== */
 :root {
@@ -420,6 +438,23 @@ kbd { font-family: var(--font-mono); }
 .copy-mail:hover { color: var(--text-muted); background: var(--surface); }
 
 .footer { position: absolute; bottom: 28px; left: 0; right: 0; font-size: 13px; color: var(--text-dim); }
+.footer a { color: var(--text-muted); transition: color 0.2s; }
+.footer a:hover { color: var(--text); }
+
+/* ==========================================================================
+   Legal pages
+   ========================================================================== */
+.legal { max-width: 720px; margin: 0 auto; padding: 72px var(--gutter) 96px; color: var(--text-muted); }
+.legal__back { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); transition: color 0.2s; }
+.legal__back:hover { color: var(--text); }
+.legal h1 { margin: 40px 0 16px; font-size: clamp(30px, 8vw, 40px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.15; color: var(--text); }
+.legal h2 { margin: 40px 0 10px; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; color: var(--text); }
+.legal p { margin-bottom: 12px; }
+.legal ul { margin-bottom: 12px; padding-left: 20px; list-style: disc; }
+.legal a:not(.legal__back) { color: var(--text); border-bottom: 1px solid var(--border-strong); overflow-wrap: anywhere; transition: border-color 0.2s; }
+.legal a:not(.legal__back):hover { border-color: var(--coral); }
+.legal__lead { font-size: 18px; }
+.legal__stand { margin-top: 40px; font-size: 13px; color: var(--text-dim); }
 
 /* ==========================================================================
    Reveal on scroll
